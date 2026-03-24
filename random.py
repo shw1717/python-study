@@ -18,7 +18,7 @@ def main(page: ft.Page):
             elif user > answer:
                 result.value = "DOWN"
             else:
-                result.value = "정답입니다! 🎉"
+                result.value = "정답입니다!"
             
         except:
             result.value = "숫자를 입력하세요!"
