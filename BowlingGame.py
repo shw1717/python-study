@@ -36,6 +36,9 @@ class BowlingGame:
         index = 0 # 현재 투구 위치
 
         for frame in range(10): # 10프레임 반복
+            if index >= len(self.rolls): # 투구 데이터 부족 시 종료
+                break
+            
             if self.is_strike(index): # 스트라이크인 경우
                 score += self.strike_score(index) # 점수 계산
                 index += 1 # 스트라이크는 1칸 이동
